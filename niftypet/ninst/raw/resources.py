@@ -883,6 +883,7 @@ def get_mmr_constants():
             "ICOSSTP": (NCOS - 1) / (1 - COSUPSMX),
             # > intensity emission image threshold to be considered for scatter modelling
             "ETHRLD": 0.05,
+
         }
     )
     # ---------------------------------------------------------
