@@ -740,18 +740,20 @@ def get_mmr_constants():
     # > update with image voxel constants
     # Reference image size (usually the default from Siemens)
     # and GPU dimensions for optimal execution
+    zoom = 1
     Cnt.update(
-        SO_IMZ=127,
-        SO_IMY=344,
-        SO_IMX=344,
-        SO_VXX=0.208626,
-        SO_VXY=0.208626,
-        SO_VXZ=0.203125,
-        SZ_IMZ=127,
-        SZ_IMY=320,
-        SZ_IMX=320,
-        SZ_VOXY=0.208626,
-        SZ_VOXZ=0.203125,
+        zoom=zoom,
+        SO_IMZ=127*zoom,
+        SO_IMY=344*zoom,
+        SO_IMX=344*zoom,
+        SO_VXX=0.208626/zoom,
+        SO_VXY=0.208626/zoom,
+        SO_VXZ=0.203125/zoom,
+        SZ_IMZ=127*zoom,
+        SZ_IMY=320*zoom,
+        SZ_IMX=320*zoom,
+        SZ_VOXY=0.208626/zoom,
+        SZ_VOXZ=0.203125/zoom,
         # SO_IMZ = 127,
         # SO_IMY = 384,
         # SO_IMX = 384,
