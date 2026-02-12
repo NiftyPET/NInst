@@ -822,17 +822,17 @@ def get_mmr_constants():
 
     # -------Scatter image size in x,y,z directions
     # > transmission image
-    SS_IMX = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMX"]) // 2 * 2)
-    SS_IMY = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMY"]) // 2 * 2)
-    SS_IMZ = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMZ"]) // 2 * 2 - 1)
+    SS_IMX = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMX"])/zoom // 2 * 2)
+    SS_IMY = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMY"])/zoom // 2 * 2)
+    SS_IMZ = int(ceil(Cnt["TRGTSCT"][0] * Cnt["SO_IMZ"])/zoom // 2 * 2 - 1)
     SS_VXY = round((Cnt["SO_VXY"] * Cnt["SO_IMX"]) / SS_IMX, 6)
     SS_VXZ = round((Cnt["SO_VXZ"] * Cnt["SO_IMZ"]) / SS_IMZ, 6)
     IS_VXZ = round(1 / SS_VXZ, 6)
 
     # > emission image
-    SSE_IMX = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMX"]) // 2 * 2)
-    SSE_IMY = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMY"]) // 2 * 2)
-    SSE_IMZ = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMZ"]) // 2 * 2 + 1)
+    SSE_IMX = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMX"])/zoom // 2 * 2)
+    SSE_IMY = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMY"])/zoom // 2 * 2)
+    SSE_IMZ = int(ceil(Cnt["TRGTSCT"][1] * Cnt["SO_IMZ"])/zoom // 2 * 2 + 1)
     SSE_VXY = round((Cnt["SO_VXY"] * Cnt["SO_IMX"]) / SSE_IMX, 6)
     SSE_VXZ = round((Cnt["SO_VXZ"] * Cnt["SO_IMZ"]) / SSE_IMZ, 6)
     # -------
